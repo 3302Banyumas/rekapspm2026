@@ -24,8 +24,12 @@ else:
 st.dataframe(df_filtered, use_container_width=True)
 
 #---Memunculkan Scan SPM-----#
-df["Scan SPM"] = df["Scan SPM"].apply(
-    lambda x: f'<a href="{x}" target="_blank" style="background:#1f77b4;color:white;padding:5px 10px;border-radius:5px;text-decoration:none;">📄 Lihat Scan</a>' if pd.notnull(x) else ""
+st.data_editor(
+    df_filtered,
+    column_config={
+        "Scan SPM": st.column_config.LinkColumn("Scan SPM")
+    },
+    use_container_width=True
 )
 
 
