@@ -4,7 +4,7 @@ import pandas as pd
 # --- CONFIG ---
 st.set_page_config(page_title="Data Rekap SPM", layout="wide")
 
-st.title("Data Rekap SPM 2025 BPS Kabupaten Banyumas")
+st.title("Data Rekap SPM TA 2026 BPS Kabupaten Banyumas")
 
 # --- AMBIL DATA DARI GOOGLE SHEET ---
 # Ganti link berikut dengan link CSV dari Google Spreadsheet
@@ -22,6 +22,7 @@ else:
 
 # --- TAMPILKAN TABEL ---
 st.dataframe(df_filtered, use_container_width=True)
+
 
 
 
