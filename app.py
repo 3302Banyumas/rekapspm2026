@@ -20,9 +20,6 @@ if search:
 else:
     df_filtered = df
 
-# --- TAMPILKAN TABEL ---
-st.dataframe(df_filtered, use_container_width=True)
-
 #---Memunculkan Scan SPM-----#
 st.data_editor(
     df_filtered,
@@ -31,6 +28,7 @@ st.data_editor(
     },
     use_container_width=True
 )
+
 
 
 
